@@ -24,6 +24,12 @@ task("accounts", "Prints the list of accounts", async () => {
   networks: {
     hardhat: {
       chainId: 1337
+    },
+    ropsten: {
+      url: "https://ropsten.infura.io/v3/3e1fe4c878d64d9d833f10aaf53d3439",
+      // accounts: [`0x${process.env.ACCOUNT_KEY}`]
+      //TODO: get .env file reading correctly. I can paste the account number after 0x, but I don't want to expose this.
+      accounts: ["0x..."]
     }
   }
 };
